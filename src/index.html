@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameBoost Cleaner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon">G</div><div><b>GAMEBOOST</b><small>CLEANER</small></div></div>
+    <div class="nav-label">MENU PRINCIPAL</div>
+    <button class="nav active"><span>▦</span> Painel</button>
+    <button class="nav" id="nav-clean"><span>♧</span> Limpeza</button>
+    <button class="nav" id="nav-gamer"><span>🎮</span> Modo Gamer</button>
+    <div class="side-bottom"><div class="online-dot"></div> Sistema conectado <small>Versão 1.0.0</small></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar"><div><span class="eyebrow">CENTRAL DE DESEMPENHO</span><h1>Painel geral</h1></div><div class="status"><i></i> PC conectado</div></header>
+    <section class="hero">
+      <div><span class="eyebrow blue">OTIMIZAÇÃO INTELIGENTE</span><h2>Seu PC pronto para<br><em>uma nova partida.</em></h2>
+      <p>Analise arquivos temporários e libere espaço com segurança.</p>
+      <button class="primary" id="scanBtn">⌕ &nbsp; ANALISAR AGORA</button></div>
+      <div class="hero-art"><div class="ring"></div><div class="chip">GB<span>+</span></div><div class="art-caption">PERFORMANCE<br><b>MODE</b></div></div>
+    </section>
+
+    <section class="section-head"><div><span class="eyebrow">VISÃO DO SISTEMA</span><h3>Resumo do computador</h3></div><span class="live">● AO VIVO</span></section>
+    <section class="stats">
+      <article class="stat"><div class="stat-icon">▤</div><small>ARQUIVOS TEMPORÁRIOS</small><strong id="fileCount">—</strong><span>Encontrados na pasta TEMP</span></article>
+      <article class="stat"><div class="stat-icon">◈</div><small>ESPAÇO RECUPERÁVEL</small><strong id="recoverable">—</strong><span>Estimativa da análise</span></article>
+      <article class="stat"><div class="stat-icon">▣</div><small>MEMÓRIA RAM TOTAL</small><strong id="ramTotal">—</strong><span id="ramFree">Memória disponível: —</span></article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel" id="cleanupPanel"><div class="panel-title"><div><span class="eyebrow">LIMPEZA SEGURA</span><h3>Arquivos temporários</h3></div><span class="tag">USUÁRIO</span></div>
+        <p>O GameBoost verifica a pasta TEMP do seu usuário. Arquivos bloqueados ou sem permissão serão ignorados.</p>
+        <div class="progress"><div id="progressBar"></div></div><div class="progress-label"><span id="scanStatus">Aguardando análise</span><span id="scanSize">0 MB</span></div>
+        <button class="primary full" id="cleanBtn" disabled>⌁ &nbsp; LIMPAR SELECIONADOS</button>
+        <small class="hint">Uma confirmação será exibida antes da exclusão.</small>
+      </article>
+      <article class="panel gamer" id="gamerPanel"><div class="game-icon">🎮</div><span class="eyebrow">SESSÃO DE JOGO</span><h3>Modo Gamer</h3><p>Feche aplicativos desnecessários manualmente, conecte o notebook à energia e escolha o perfil de energia do Windows adequado.</p><div class="tip">ⓘ O modo informativo não encerra processos nem altera configurações do Windows.</div><button class="secondary" id="gamerBtn">VER DICAS PARA JOGAR</button></article>
+    </section>
+    <footer>GAMEBOOST CLEANER <span>•</span> Limpeza local, sem envio de arquivos.</footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="renderer.js"></script>
+</body>
+</html>
