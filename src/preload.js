@@ -1,7 +1,1 @@
-const { contextBridge, ipcRenderer } = require('electron');
-
-contextBridge.exposeInMainWorld('gameboost', {
-  getSystemInfo: () => ipcRenderer.invoke('system:info'),
-  scanTemp: () => ipcRenderer.invoke('cleanup:scan'),
-  cleanTemp: () => ipcRenderer.invoke('cleanup:run')
-});
+const {contextBridge,ipcRenderer}=require('electron');contextBridge.exposeInMainWorld('gameboost',{getSystemInfo:()=>ipcRenderer.invoke('system:info'),scan:k=>ipcRenderer.invoke('cleanup:scan',k),clean:k=>ipcRenderer.invoke('cleanup:run',k),listProcesses:()=>ipcRenderer.invoke('processes:list'),closeProcess:id=>ipcRenderer.invoke('processes:close',id)});
